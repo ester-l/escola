@@ -2,9 +2,10 @@ package com.piaget.escola.Service;
 
 import com.piaget.escola.Interface.AlunoRepository;
 import com.piaget.escola.Models.Aluno;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class AlunoService {
     private final AlunoRepository repository;
 
@@ -17,7 +18,7 @@ public class AlunoService {
     }
 
     public Aluno salvarNovoAluno(Aluno aluno){
-        return repository.save(Aluno);
+        return repository.save(aluno);
     }
 
     public void deletarAluno(Long id){
